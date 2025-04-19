@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - NUTRISYNC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="signup-box">
+      <div class="logo">
+        <!-- Make sure to use a relative path to your logo -->
+        <img src="assets/nutisync logo.png" alt="NutriSync Logo">
+      </div>
+      <h2>Create Your Account</h2>
+      <form id="signup-form">
+        <div class="input-group">
+          <label for="account-type">Account Type</label>
+          <select id="account-type" name="account-type" required class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+            <option value="" disabled selected>Select account type</option>
+            <option value="client">Client</option>
+            <option value="nutritionist">Nutritionist</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" required>
+        </div>
+        <div id="nutritionist-fields" style="display:none;">
+          <div class="input-group">
+            <label for="qualification">Qualification</label>
+            <input type="text" id="qualification" name="qualification" />
+          </div>
+          <div class="input-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" />
+          </div>
+          <div class="input-group">
+            <label for="about">About Yourself</label>
+            <textarea id="about" name="about" rows="3" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="signup-btn">Sign Up</button>
+        <div class="extra-links">
+          <a href="F:\apo\NUTRISYNC.html">Already have an account? Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
