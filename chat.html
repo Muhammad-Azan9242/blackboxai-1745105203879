@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NutriSync - Chat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-green-50 min-h-screen font-sans">
+  <header class="bg-green-700 text-white p-4 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="assets/nutisync logo.png" alt="NutriSync Logo" class="h-10" />
+      <h1 class="text-2xl font-bold">NutriSync</h1>
+    </div>
+    <nav class="space-x-6">
+      <a href="home.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="chat.html" class="hover:underline font-semibold">Chat</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+      <a href="index.html" class="hover:underline">Logout</a>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-6 text-green-900">Chat with Nutritionists</h2>
+    <div class="border border-green-300 rounded p-4 bg-white shadow max-h-96 overflow-y-auto">
+      <p class="text-green-700 italic mb-4">This is a placeholder chat interface. Chat functionality will be implemented in the future.</p>
+      <div class="space-y-2">
+        <div class="bg-green-100 p-3 rounded max-w-xs">
+          <p><strong>Nutritionist:</strong> Hello! How can I assist you with your nutrition goals today?</p>
+        </div>
+        <div class="bg-green-200 p-3 rounded max-w-xs self-end ml-auto">
+          <p><strong>You:</strong> I want to learn more about healthy meal plans.</p>
+        </div>
+      </div>
+    </div>
+    <form class="mt-4 flex space-x-2">
+      <input type="text" placeholder="Type your message..." class="flex-grow border border-green-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" />
+      <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Send</button>
+    </form>
+  </main>
+
+  <footer class="bg-green-700 text-white text-center py-4 mt-auto">
+    &copy; 2024 NutriSync. All rights reserved.
+  </footer>
+</body>
+</html>
