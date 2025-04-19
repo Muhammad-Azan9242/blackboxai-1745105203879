@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NutriSync - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-green-50 min-h-screen font-sans">
+  <header class="bg-green-700 text-white p-4 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="assets/nutisync logo.png" alt="NutriSync Logo" class="h-10" />
+      <h1 class="text-2xl font-bold">NutriSync</h1>
+    </div>
+    <nav class="space-x-6">
+      <a href="home.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="chat.html" class="hover:underline">Chat</a>
+      <a href="contact.html" class="hover:underline font-semibold">Contact</a>
+      <a href="index.html" class="hover:underline">Logout</a>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-6 text-green-900">Contact Us</h2>
+    <form class="bg-white p-6 rounded shadow max-w-lg mx-auto space-y-4">
+      <div>
+        <label for="name" class="block font-semibold text-green-800 mb-1">Name</label>
+        <input type="text" id="name" class="w-full border border-green-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" required />
+      </div>
+      <div>
+        <label for="email" class="block font-semibold text-green-800 mb-1">Email</label>
+        <input type="email" id="email" class="w-full border border-green-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" required />
+      </div>
+      <div>
+        <label for="message" class="block font-semibold text-green-800 mb-1">Message</label>
+        <textarea id="message" rows="5" class="w-full border border-green-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500" required></textarea>
+      </div>
+      <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition font-semibold">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="bg-green-700 text-white text-center py-4 mt-auto">
+    &copy; 2024 NutriSync. All rights reserved.
+  </footer>
+</body>
+</html>
