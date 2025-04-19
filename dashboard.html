@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NutriSync Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0fdf4;
+      color: #1a202c;
+      min-height: 100vh;
+    }
+    .sidebar {
+      background-color: #56ab2f;
+      color: white;
+      min-height: 100vh;
+    }
+    .sidebar a {
+      @apply block py-3 px-6 hover:bg-green-700 transition rounded;
+    }
+    .btn-primary {
+      @apply bg-green-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-green-700 transition;
+    }
+    .btn-secondary {
+      @apply bg-white text-green-700 font-semibold py-2 px-4 rounded shadow hover:bg-green-100 transition;
+    }
+    .card {
+      @apply bg-white rounded-lg shadow p-6 mb-6;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="flex">
+
+  <!-- Sidebar -->
+  <aside class="sidebar w-64 flex flex-col">
+    <div class="p-6 text-center border-b border-green-700">
+      <h1 class="text-2xl font-bold mb-2">NutriSync</h1>
+      <p class="text-sm">Your Nutrition Companion</p>
+    </div>
+    <nav class="flex-grow overflow-y-auto scrollbar-hide">
+      <a href="#" class="block px-6 py-3 font-semibold hover:bg-green-700">Home</a>
+      <a href="#" class="block px-6 py-3 font-semibold hover:bg-green-700">Recipes</a>
+      <a href="#" class="block px-6 py-3 font-semibold hover:bg-green-700">Community</a>
+      <a href="#" class="block px-6 py-3 font-semibold hover:bg-green-700">Settings</a>
+      <a href="index.html" class="block px-6 py-3 font-semibold hover:bg-green-700">Log Out</a>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="flex-grow p-8 overflow-y-auto max-h-screen">
+    <!-- Welcome Section -->
+    <section class="mb-8">
+      <h2 class="text-3xl font-bold mb-2">Welcome to NutriSync!</h2>
+      <p class="mb-4 text-green-700 font-semibold">Your Gateway to Revolutionary Nutrition Management</p>
+      <div class="mb-6">
+        <label for="role" class="block font-semibold mb-2">Who are you?</label>
+        <select id="role" class="border border-gray-300 rounded px-4 py-2 w-48">
+          <option>Nutritionist</option>
+          <option>Client</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Dashboard Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Recipe of the Day -->
+      <div class="card">
+        <h3 class="text-xl font-bold mb-4">Recipe of the Day</h3>
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Corn Bowl" class="rounded mb-4" />
+      <p class="font-semibold">Corn Bowl</p>
+      <p>Calories: 177 kcal</p>
+      <p>Time: 10 mins</p>
+    </div>
+
+    <!-- Added user uploaded food images and recipes -->
+    <div class="card">
+      <h3 class="text-xl font-bold mb-4">More Recipes</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="1.webp" alt="Fresh Salad" class="rounded mb-2 w-full h-40 object-cover" />
+          <h4 class="font-semibold">Fresh Salad</h4>
+          <p>A healthy mix of fresh vegetables and herbs, perfect for weight loss and detox.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="2.webp" alt="Fruit Bowl" class="rounded mb-2 w-full h-40 object-cover" />
+          <h4 class="font-semibold">Fruit Bowl</h4>
+          <p>A colorful bowl of seasonal fruits rich in vitamins and antioxidants.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="5.jpg" alt="Grilled Chicken" class="rounded mb-2 w-full h-40 object-cover" />
+          <h4 class="font-semibold">Grilled Chicken</h4>
+          <p>Lean protein grilled to perfection, great for muscle building and maintenance.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="7.webp" alt="Smoothie" class="rounded mb-2 w-full h-40 object-cover" />
+          <h4 class="font-semibold">Green Smoothie</h4>
+          <p>A refreshing blend of greens and fruits to boost your energy and immunity.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="an1.jfif" alt="Oatmeal" class="rounded mb-2 w-full h-40 object-cover" />
+          <h4 class="font-semibold">Oatmeal Breakfast</h4>
+          <p>High fiber oatmeal with nuts and fruits to start your day right.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="an2.jfif" alt="Veggie Stir Fry" class="rounded mb-2 w-full h-40 object-cover" />
+          <h4 class="font-semibold">Veggie Stir Fry</h4>
+          <p>A quick and nutritious stir fry loaded with colorful vegetables.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="an3.webp" alt="Quinoa Salad" class="rounded mb-2 w-full h-40 object-cover" />
+          <h4 class="font-semibold">Quinoa Salad</h4>
+          <p>A protein-packed salad with quinoa, veggies, and a tangy dressing.</p>
+        </div>
+      </div>
+    </div>
+
+      <!-- Exercise Tips -->
+      <div class="card">
+        <h3 class="text-xl font-bold mb-4">Exercise Tips</h3>
+        <ul class="list-disc list-inside space-y-2 text-green-700">
+          <li>Start your day with a 10-minute stretch.</li>
+          <li>Include cardio exercises 3 times a week.</li>
+          <li>Stay hydrated during workouts.</li>
+          <li>Incorporate strength training twice a week.</li>
+        </ul>
+      </div>
+
+      <!-- Nutritionist Appointment -->
+      <div class="card">
+        <h3 class="text-xl font-bold mb-4">Your Nutritionist Appointment</h3>
+        <p>Next appointment: <strong>12th Dec 2024</strong></p>
+        <button class="btn-primary mt-4">Book New Appointment</button>
+      </div>
+    </div>
+
+    <!-- Client List and Packages -->
+    <section class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Client List -->
+      <div class="card">
+        <h3 class="text-xl font-bold mb-4">Client List</h3>
+        <ul class="divide-y divide-gray-200 max-h-64 overflow-y-auto">
+          <li class="py-2 flex justify-between items-center">
+            <span>Client 1</span>
+            <button class="btn-secondary text-sm">View</button>
+          </li>
+          <li class="py-2 flex justify-between items-center">
+            <span>Client 2</span>
+            <button class="btn-secondary text-sm">View</button>
+          </li>
+          <li class="py-2 flex justify-between items-center">
+            <span>Client 3</span>
+            <button class="btn-secondary text-sm">View</button>
+          </li>
+          <li class="py-2 flex justify-between items-center">
+            <span>Client 4</span>
+            <button class="btn-secondary text-sm">View</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Consultation Packages -->
+      <div class="card">
+        <h3 class="text-xl font-bold mb-4">Consultation Packages</h3>
+        <ul class="space-y-4">
+          <li class="border border-green-300 rounded p-4">
+            <h4 class="font-semibold">Silver Package</h4>
+            <p>Rs. 1000 - 7 Days</p>
+            <p>Consultation, Tracking, Revision included</p>
+          </li>
+          <li class="border border-green-300 rounded p-4">
+            <h4 class="font-semibold">Gold Package</h4>
+            <p>Rs. 3000 - 1 Month</p>
+            <p>Consultation, Tracking, Revision included</p>
+          </li>
+          <li class="border border-green-300 rounded p-4">
+            <h4 class="font-semibold">Diamond Package</h4>
+            <p>Rs. 7000 - 6 Months</p>
+            <p>Consultation, Tracking, Revision included</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Personal Diary -->
+    <section class="mt-8 card">
+      <h3 class="text-xl font-bold mb-4">Personal Diary</h3>
+      <textarea rows="5" class="w-full border border-gray-300 rounded p-3 resize-none" placeholder="Write your notes here..."></textarea>
+      <button class="btn-primary mt-3">Save Note</button>
+    </section>
+  </main>
+
+</body>
+</html>
